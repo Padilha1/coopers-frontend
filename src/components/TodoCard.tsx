@@ -21,7 +21,9 @@ export default function TodoCard() {
     <div className="shadow-xl px-6 py-8 w-full border-t-[20px] border-t-orange-400">
       <div className="flex flex-col items-center h-full justify-between">
         <div className="flex-1 flex flex-col w-full">
-          <h3 className="text-4xl text-center font-semibold mb-5">To-do</h3>
+          <h3 className="text-4xl text-center font-semibold mb-5 text-black">
+            To-do
+          </h3>
           <p className="text-gray-600 text-center mb-7 text-2xl">
             Take a breath. <br /> Start doing.
           </p>

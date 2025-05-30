@@ -13,7 +13,9 @@ export default function DoneCard() {
     <div className="shadow-xl rounded-lg px-6 py-8 w-full border-t-[20px] border-t-green-550">
       <div className="flex flex-col items-center h-full justify-between">
         <div className="flex-1 flex flex-col w-full">
-          <h3 className="text-4xl font-semibold mb-5  text-center">Done</h3>
+          <h3 className="text-4xl font-semibold mb-5  text-center text-black">
+            Done
+          </h3>
           <p className="text-2xl text-black mb-7  text-center">
             Congratulations! <br />
             <strong>You have done {completedTodos.length} tasks</strong>
