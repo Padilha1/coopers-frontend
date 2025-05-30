@@ -19,7 +19,7 @@ export default function ContactSection() {
         />
       </div>
 
-      <div className="bg-white shadow-xl max-w-xl w-full rounded-lg pt-20 pb-10 px-6 ">
+      <div className="bg-white shadow-xl max-w-xl w-full rounded-lg pt-20 pb-10 px-6 text-black">
         <div className="flex items-center gap-4 mb-6">
           <div className="bg-green-500 p-3 rounded">
             <Image src="/Mail.svg" alt="Ícone" width={30} height={30} />
