@@ -6,7 +6,7 @@ import { delete_all } from "@/util/http";
 import toast from "react-hot-toast";
 
 export default function TodoCard() {
-  const { todos, addTodo, fetchTodos } = useAuth();
+  const { todos, addTodo, fetchTodos, updateTodoStatus } = useAuth();
   const [inputText, setInputText] = useState("");
 
   const incompleteTodos = todos.filter((todo) => !todo.completed);
@@ -34,7 +34,14 @@ export default function TodoCard() {
             className="w-full mb-4 border-b py-1 px-2 outline-none focus:text-orange-500"
           />
 
-          <ul className="space-y-2">
+          <ul
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              const id = e.dataTransfer.getData("text/plain");
+              updateTodoStatus(id, false);
+            }}
+            className="space-y-2"
+          >
             {incompleteTodos.map((item) => (
               <TodoItem
                 key={item.id}

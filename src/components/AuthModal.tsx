@@ -78,7 +78,7 @@ export default function AuthModal({ onClose }: { onClose: () => void }) {
             <label className="block text-sm font-medium mb-1">Password:</label>
             <input
               name="user_password"
-              type="user_password"
+              type="password"
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-300 rounded"
             />

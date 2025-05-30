@@ -6,7 +6,7 @@ import { delete_all } from "@/util/http";
 import toast from "react-hot-toast";
 
 export default function DoneCard() {
-  const { todos, fetchTodos } = useAuth();
+  const { todos, fetchTodos, updateTodoStatus } = useAuth();
   const completedTodos = todos.filter((todo) => todo.completed);
 
   return (
@@ -18,7 +18,14 @@ export default function DoneCard() {
             Congratulations! <br />
             <strong>You have done {completedTodos.length} tasks</strong>
           </p>
-          <ul className="space-y-2">
+          <ul
+            onDragOver={(e) => e.preventDefault()}
+            onDrop={(e) => {
+              const id = e.dataTransfer.getData("text/plain");
+              updateTodoStatus(id, true);
+            }}
+            className="space-y-2"
+          >
             {completedTodos.map((item, idx) => (
               <TodoItem
                 key={idx}

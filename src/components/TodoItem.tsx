@@ -34,9 +34,11 @@ export default function TodoItem({ id, content, completed }: Props) {
       }
     }
   };
-
+  const handleDragStart = (e: React.DragEvent<HTMLLIElement>) => {
+    e.dataTransfer.setData("text/plain", id);
+  };
   return (
-    <div className="flex items-center justify-between group">
+    <li draggable onDragStart={handleDragStart}>
       <div className="flex items-center gap-2">
         <span
           onClick={async () => {
@@ -79,6 +81,6 @@ export default function TodoItem({ id, content, completed }: Props) {
       >
         delete
       </button>
-    </div>
+    </li>
   );
 }
