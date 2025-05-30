@@ -22,7 +22,7 @@ export default function ContactSection() {
       <div className="bg-white shadow-xl max-w-xl w-full rounded-lg pt-20 pb-10 px-6 ">
         <div className="flex items-center gap-4 mb-6">
           <div className="bg-green-500 p-3 rounded">
-            <Image src="/mail.svg" alt="Ícone" width={30} height={30} />
+            <Image src="/Mail.svg" alt="Ícone" width={30} height={30} />
           </div>
           <div>
             <h4 className="text-black text-lg font-normal leading-4">GET IN</h4>

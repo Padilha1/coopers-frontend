@@ -26,7 +26,7 @@ export default function Hero() {
 
         <div className="flex justify-center items-center ">
           <Image
-            src="/slides/02.jpg"
+            src="/Slides/02.jpg"
             alt="Hero Office"
             width={500}
             height={500}
